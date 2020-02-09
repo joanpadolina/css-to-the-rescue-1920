@@ -12,7 +12,6 @@ body {
   margin: 0; }
 
 main {
-  max-width: 800px;
   margin: 10vh auto; }
 
 header {
@@ -162,6 +161,47 @@ svg:hover #paw-l .cls-2 {
     transform-origin: center right;
     transform-box: fill-box; }
 
+svg #blood-drops-individual .cls-8:nth-child(1) {
+  animation: blood-drip 10s ease-in-out infinite; }
+svg #blood-drops-individual .cls-8:nth-child(2) {
+  transition-delay: 5s;
+  animation: blood-drip 8s ease-in-out infinite; }
+svg #blood-drops-individual .cls-8:nth-child(3) {
+  transition-delay: 2s;
+  animation: blood-drip 11s ease-in-out infinite; }
+svg #blood-drops-individual .cls-8:nth-child(4) {
+  transition-delay: 6s;
+  animation: blood-drip 14s ease-in-out infinite; }
+svg #blood-drops-individual .cls-8:nth-child(5) {
+  transition-delay: 4s;
+  animation: blood-drip 5s ease-in-out infinite; }
+svg #blood-drops-individual .cls-8:nth-child(6) {
+  transition-delay: 3s;
+  animation: blood-drip 4s ease-in-out infinite; }
+
+svg #blood-drop-circle .cls-8:nth-child(1) {
+  animation: blood-drip-circle 2s infinite; }
+svg #blood-drop-circle .cls-8:nth-child(2) {
+  transition-delay: 2s;
+  animation: blood-drip-circle 4s infinite; }
+svg #blood-drop-circle .cls-8:nth-child(3) {
+  transition-delay: 1s;
+  animation: blood-drip-circle 3s infinite; }
+svg #blood-drop-circle .cls-8:nth-child(4) {
+  transition-delay: 3s;
+  animation: blood-drip-circle 1.4s infinite; }
+
+svg #hair .hair .cls-4:nth-child(1) {
+  transform: translate(11.8em, 16.2em); }
+
+svg:hover {
+  transform: transition 200ms ease; }
+  svg:hover #head #tear-r, svg:hover #tear-l {
+    animation: tear-animate 404ms ease-in-out infinite; }
+
+svg #head #tear-r, #tear-l {
+  animation: tear-animate 40s ease-in-out infinite; }
+
 @keyframes head-infinite-rotate {
   0% {
     transform: rotate(0deg);
@@ -239,5 +279,32 @@ svg:hover #paw-l .cls-2 {
     transform: rotate(22deg);
     transform-origin: center right;
     transform-box: fill-box; } }
+@keyframes blood-drip {
+  0% {
+    transform: translateY(0em) scale(1, 1);
+    transform-origin: center-top; }
+  50% {
+    transform: translateY(-8em) scale(1, 1.9);
+    transform-origin: center-top; }
+  100% {
+    transform: translateY(0em);
+    transform-origin: center-top; } }
+@keyframes blood-drip-circle {
+  0% {
+    transform: translateY(-2em) scale(1, 1);
+    opacity: 1; }
+  50% {
+    transform: translateY(2em) scale(1, 1.4);
+    opacity: 0; }
+  100% {
+    transform: translateY(3em);
+    opacity: 0; } }
+@keyframes tear-animate {
+  0% {
+    transform: translate(2px, 0px);
+    transform-origin: center top; }
+  100% {
+    transform: translate(2px, -8px);
+    transform-origin: center top; } }
 
 /*# sourceMappingURL=styles.css.map */
