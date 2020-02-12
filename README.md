@@ -1,3 +1,21 @@
+# Billie Eillish Album covers
+
+[Live Demo]()
+
+## Concept
+
+For this course of breaking te internet I wanted to make an artist page of Billie Eillish. Because of the variety of songs she has produced she gave me an inspiration to make a cover website dedicated to her.
+
+## Goals
+* Work with **SVG illustration** and animate this with css-only
+* Make two versions of the website which is **light and dark**
+* **No** squares or circles in the endproduct
+* And **selector only** selection on targets
+
+
+
+<!-- 
+
 # CSS to the Rescue @cmda-minor-web 19-20
 
 _This course is in English_
@@ -28,17 +46,17 @@ Goals of this week:
 
 <!-- [Slides](https://drive.google.com/open?id=1Rjl9xqXoKniQSRJPdkU1O5YwWC33SJK8KiV0a-H_xZU) -->
 
-### Week 2 - Create Stuff, 🙃 Smile 
+<!-- ### Week 2 - Create Stuff, 🙃 Smile 
 
-This week’s goals: Moar inspiration, create stuff, break stuff, and learn from each other.
+This week’s goals: Moar inspiration, create stuff, break stuff, and learn from each other. --> 
 
 <!-- [Opdrachten](https://drive.google.com/open?id=1GMDTdW3LycAYpZSFI6gk_lrKrx8-zLWrNh69aaVEH5Y) -->
 
 <!-- [Slides](https://drive.google.com/open?id=1IqQeu1m0dQiSC_KCvrn8eencAgtYe7X6qT-gm0n9Bmc) -->
 
-### Week 3 - 🎪 Show time
+<!-- ### Week 3 - 🎪 Show time
 
-Goals: Blow us away.
+Goals: Blow us away. -->
 
 <!-- [Opdrachten](https://drive.google.com/open?id=13pKQu72pshaEzKw9q5JHLa-aop85nMP6nDCdqioWjoQ) -->
 
