@@ -1,6 +1,7 @@
 # Billie Eillish Album covers
 
 [Live Demo]()
+![billie](https://i.imgur.com/5VNHXtP.png)
 
 ## Concept
 
@@ -11,6 +12,26 @@ For this course of breaking te internet I wanted to make an artist page of Billi
 * Make two versions of the website which is **light and dark**
 * **No** squares or circles in the endproduct
 * And **selector only** selection on targets
+
+## Personal goal
+1. Get to know how the CSS selector works with **barely** use of classes.
+1. Animate SVG elements made in illustrator and create an interaction with this.
+1. Have fun and try thinking out of the box.
+1. Don't be afraid to fail.
+1. Make it as crazy as possible.
+1. Let the user explore.
+
+### Feedback // Vitaly
+
+For the first feedback from Vitaly we came to a conclusion that the way my creation is set there is so much room for craziness. My interaction was a lot less and needed some more love. I've done this by adding some hover on **invisible** corners where to lyrics would go bend to that corner. My initial thought was "I need Javascript to achieve this" but Vasillis was like "naah-aahh you don't" so the outcome was pretty fun without javscript.
+
+I've told on the first feedback that the lightness and darkness are still work-in-progress.
+
+### Feedback // Daan
+
+Daan was very excited with my work but like any other feedback there is always room for interaction. We both though that only hover won't do justice in this project. Also I've changed the cursor to a spider which didn't make sense in my project. I need something with this spider to active a 'something' in the website. I'm still exploring the magic of CSS and noticed I'm still at the 1% in what CSS actually can do.
+Nevertheless I'm still proud in what I've achieved and explored the few days with this course.
+Also Dark and Light is hella awesome in my opnion!
 
 
 
