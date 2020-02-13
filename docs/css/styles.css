@@ -1,7 +1,42 @@
+@charset "UTF-8";
 :root {
   --dark: #2e142c;
   --red: #801336;
   --light: #fff; }
+
+.cls-1 {
+  fill: #10799a; }
+
+.cls-2 {
+  fill: #801336; }
+
+.cls-3 {
+  fill: #221128; }
+
+.cls-4 {
+  fill: #1d1d1b; }
+
+.cls-5 {
+  fill: #fff4d9;
+  stroke: #000;
+  stroke-width: 5px; }
+
+.cls-5,
+.cls-9 {
+  stroke-miterlimit: 10; }
+
+.cls-6 {
+  fill: #140a15; }
+
+.cls-7 {
+  fill: #3f9435; }
+
+.cls-8 {
+  fill: #c82d41; }
+
+.cls-9 {
+  fill: none;
+  stroke: #fff; }
 
 body {
   background-color: var(--dark);
@@ -9,13 +44,14 @@ body {
   font-family: monospace;
   font-size: 1.5em;
   line-height: 1.5;
-  margin: 0;
-  overflow: hidden; }
+  margin: 0; }
 
 main {
   width: 70%;
   text-align: center;
-  margin: 10vh auto; }
+  margin: 10vh auto;
+  top: -15em;
+  position: relative; }
 
 h1 {
   text-align: center;
@@ -42,22 +78,6 @@ header {
   width: 100%;
   top: 50%; }
 
-header button:nth-child(1) {
-  transform: rotate(-90deg);
-  font-size: 2rem;
-  z-index: 3;
-  position: relative;
-  float: left;
-  left: 1.7em; }
-
-header button:nth-child(2) {
-  transform: rotate(90deg);
-  font-size: 2rem;
-  position: relative;
-  z-index: 3;
-  float: right;
-  right: -.7em; }
-
 @keyframes lyrics-go-up {
   0% {
     top: 13; }
@@ -71,22 +91,68 @@ div.lyrics_back span {
   position: absolute;
   top: -12em;
   z-index: 0;
-  transition: 2000ms ease-in-out; }
+  transition: 2000ms ease-in-out;
+  cursor: url("../img/spin.svg"), auto;
+  width: 31em;
+  left: -5em; }
 
-div.lyrics_back span:hover {
-  color: red;
-  transform: skew(15deg, 15deg);
-  z-index: 0; }
+main button {
+  opacity: 0;
+  z-index: 3;
+  padding: 1em;
+  background: none;
+  border: none;
+  color: white;
+  transition: 300ms ease-in-out;
+  position: absolute;
+  top: 4.9em;
+  font-size: 2rem;
+  height: 3em; }
 
-.lyrics-right span {
-  white-space: nowrap;
+main section button:hover {
+  cursor: pointer; }
+
+main section button:first-of-type {
+  background: red;
+  position: absolute;
+  top: 0em;
+  left: -5.4em; }
+
+main section button:nth-of-type(2) {
+  background: red;
+  position: absolute;
+  top: 0em;
+  right: -5.9em; }
+
+main section button:nth-of-type(3) {
+  background: red;
   position: relative;
-  opacity: .8;
-  top: -20em;
-  background: black;
-  z-index: 3; }
+  top: -9em;
+  right: -14.5em; }
 
-.lyrics-left span {
+main section button:nth-of-type(4) {
+  background: red;
+  position: absolute;
+  top: 17.6em;
+  left: -5.6em; }
+
+main section button:first-of-type:hover ~ .lyrics_back span {
+  color: red;
+  transform: skew(15deg, 15deg); }
+
+main section button:nth-child(2):hover ~ .lyrics_back span {
+  color: red;
+  transform: skew(-0.06turn, -8deg); }
+
+main section button:nth-child(3):hover ~ .lyrics_back span {
+  color: red;
+  transform: skew(0.312rad); }
+
+main section button:nth-child(4):hover ~ .lyrics_back span {
+  color: red;
+  transform: skew(-25deg, 5deg); }
+
+main section div:nth-of-type(2) span {
   white-space: nowrap;
   position: relative;
   opacity: .8;
@@ -96,11 +162,14 @@ div.lyrics_back span:hover {
   display: block;
   transform: translate(-8em, 1em) rotate(90deg); }
 
-div.lyrics_back span::hover {
-  animation: lyrics-left 50s infinite ease-in-out; }
-
-.svg-background {
-  background: black; }
+main section div:nth-of-type(3) span {
+  white-space: nowrap;
+  position: relative;
+  opacity: .8;
+  left: -9em;
+  top: -15.5em;
+  background: black;
+  z-index: 3; }
 
 @keyframes lyrics-back-updown {
   0% {
@@ -123,30 +192,106 @@ div.lyrics_back span::hover {
     transform: translate(-8em, -10em) rotate(90deg); }
   100% {
     transform: translate(-8em, 1em) rotate(90deg); } }
-b {
-  opacity: .7; }
+main input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0; }
 
-button {
-  padding: 1em;
-  background: none;
-  border: none;
+main label {
+  display: inline-block;
+  background-color: var(--dark);
+  padding: 10px 20px;
+  font-family: sans-serif, Arial;
+  font-size: 16px;
+  border: 2px solid #444;
+  border-radius: 4px;
+  top: 3em;
+  top: 5em;
+  position: relative;
+  z-index: 5; }
+
+main label:hover {
+  border: 2px dashed #444; }
+
+main input[type="radio"]:checked + label {
+  background-color: var(--red);
   color: white;
-  opacity: 1;
-  transition: 300ms ease-in-out; }
+  border-color: var(--red); }
 
-button:nth-child(1):hover {
-  transform: translate(-1em) rotate(-22deg);
-  opacity: 1; }
-
-button:nth-child(2):hover {
-  transform: translate(1em) rotate(22deg);
-  opacity: 1; }
-
-button {
+input[type="radio"] {
   z-index: 4;
-  opacity: 1;
-  border: red;
-  position: relative; }
+  position: relative;
+  display: block; }
+
+input[type="radio"]:checked ~ svg .cls-2 {
+  fill: white; }
+
+input[type="radio"]:checked ~ svg:hover {
+  clip-path: polygon(48% 20%, 79% 7%, 97% 28%, 66% 75%, 51% 94%, 1% 32%, 13% 7%); }
+
+input[type="radio"]:checked ~ section div:nth-of-type(1) span {
+  background: white;
+  color: black;
+  opacity: 1; }
+
+input[type="radio"]:checked body {
+  background: white; }
+
+input[type="radio"]:checked ~ section div:nth-of-type(2) span::before {
+  content: "Falling into your ocean eyes Those ocean eyes No fair You really know how to make me cry When you gimme those ocean eyes I'm scared"; }
+
+input[type="radio"]:checked ~ section div:nth-of-type(3) span::before {
+  content: "Falling into your ocean eyes Those ocean eyes No fair You really know how to make me cry When you gimme those ocean eyes I'm scared"; }
+
+input[type="radio"]:checked ~ svg #blood-drops {
+  opacity: 0; }
+
+input[type="radio"]:checked ~ section div:nth-of-type(1) span::before {
+  content: "I've been watching you\a For some time Can't stop staring\a At those oceans eyes Burning cities And napalm skies Fifteen flares inside those ocean eyes Your ocean eyes No fair You really know how to make me cry When you gimme those ocean eyes I'm scared\aI've never fallen from quite this high\a Falling into your ocean eyes Those ocean eyes No fair You really know how to make me cry When you gimme those ocean eyes I'm scared\aI've never fallen from quite this high\a Falling into your ocean eyes Those ocean eyes I've been walking through\a A world gone blind Can't stop thinking of your diamond mind\a Careful creature Made friends with time He left her lonely with a diamond mind And those ocean eyes No fair You really know how to make me cry When you gimme those ocean eyes I'm scared\aI've…"; }
+
+input[type="radio"]:checked ~ svg #tear-r {
+  opacity: 0; }
+
+input[type="radio"]:checked ~ svg {
+  clip-path: polygon(46% 8%, 80% 23%, 94% 55%, 67% 90%, 27% 87%, 8% 54%, 17% 27%); }
+
+input[type="radio"]:checked ~ svg {
+  background: #74adee; }
+
+input[type="radio"]:nth-of-type(2):checked ~ svg .cls-2 {
+  fill: #801336; }
+
+input[type="radio"]:nth-of-type(2):checked ~ svg #blood-drops {
+  opacity: 1; }
+
+input[type="radio"]:nth-of-type(2):checked ~ svg {
+  background: black; }
+
+input[type="radio"]:nth-of-type(2):checked ~ svg #tear-r {
+  opacity: 1; }
+
+input[type="radio"]:nth-of-type(2):checked ~ svg #tear-l {
+  opacity: 1; }
+
+input[type="radio"]:nth-of-type(2):checked ~ svg {
+  clip-path: polygon(47% 1%, 56% 19%, 71% 31%, 80% 52%, 72% 72%, 50% 79%, 29% 75%, 20% 56%, 15% 40%, 33% 22%); }
+
+input[type="radio"]:nth-of-type(2):checked ~ svg:hover {
+  clip-path: polygon(48% 30%, 71% 21%, 100% 43%, 95% 73%, 84% 87%, 52% 68%, 9% 83%, 0 62%, 1% 34%, 28% 23%); }
+
+input[type="radio"]:nth-of-type(2):checked ~ section div:nth-of-type(1) span::before {
+  content: "          My Lucifer is lonely\aStanding there, killing time Can't commit to anything but a crime\aPeter's on vacation, an open invitation\a Animals, evidence Pearly gates look more like a picket fence Once you get inside 'em\aGot friends but can't invite them\aHills burn in California My turn to ignore ya Don't say I didn't warn ya All the good girls go to hell 'Cause even God herself has enemies\a And once the water starts to rise And heaven's out of sight\aShe'll want the devil on her team\aMy Lucifer is lonely Look at you needing me You know I'm not your friend without some greenery\aWalk in wearing fetters Peter should know better Your cover up is caving in Man is such a fool Why are we saving him? Poisoning themselves now Begging for our help, wow ! Hills burn in California My turn to ignore ya Don't say I didn't warn ya All the good girls go to hell 'Cause even God herself has enemies\a And once the water starts to rise And heaven's out of sight\aShe'll want the devil on her team\aMy Lucifer is lonely There's nothing left to save now\aMy god is gonna owe me There's nothing left to save now"; }
+
+input[type="radio"]:nth-of-type(2):checked ~ section div:nth-of-type(1) span {
+  background: var(--dark);
+  color: white;
+  opacity: .2; }
+
+input[type="radio"]:nth-of-type(2):checked ~ section div:nth-of-type(2) span::before {
+  content: "       All the good girls go to hell\a'Cause even God herself has enemies\a And once the water starts to rise And heaven's out of sight\aShe'll want the devil on her team"; }
+
+input[type="radio"]:nth-of-type(2):checked ~ section div:nth-of-type(3) span::before {
+  content: "       All the good girls go to hell\a'Cause even God herself has enemies\a And once the water starts to rise And heaven's out of sight\aShe'll want the devil on her team"; }
 
 .examples img {
   max-width: 25vh; }
@@ -164,9 +309,8 @@ svg {
   border: 1em solid black;
   background: black;
   clip-path: polygon(47% 1%, 56% 19%, 71% 31%, 80% 52%, 72% 72%, 50% 79%, 29% 75%, 20% 56%, 15% 40%, 33% 22%);
-  top: -14em;
   position: relative;
-  transition: 1s ease-in-out;
+  transition: 750ms ease-in-out;
   z-index: 2; }
 
 svg:hover {
@@ -209,60 +353,60 @@ svg #linespath:nth-child(n+16) {
   transition-delay: 5s;
   animation: glitch-lines 43ms ease infinite reverse; }
 
-#neck-shirt:hover #head {
+svg:hover #head {
   transform: rotate(15deg);
   transform-origin: 50% 50%;
   animation: head-rotates 500ms ease infinite; }
-#neck-shirt:hover #paw-l {
+svg:hover #paw-l {
   transform: rotate(10deg);
   transform-origin: 50% 50%; }
-#neck-shirt:hover #paw-r {
+svg:hover #paw-r {
   transform: rotate(-10deg);
   transform-origin: 50% 50%; }
-  #neck-shirt:hover #paw-r .cls-2:nth-child(4) {
+  svg:hover #paw-r .cls-2:nth-child(4) {
     transition-delay: 16s ease !important; }
-#neck-shirt:hover #paw-r .cls-2 {
+svg:hover #paw-r .cls-2 {
   transition: transform 1s ease; }
-  #neck-shirt:hover #paw-r .cls-2:nth-child(1) {
+  svg:hover #paw-r .cls-2:nth-child(1) {
     transform: translateY(-3em) rotate(10deg);
     transform-origin: center left;
     transform-box: fill-box; }
-  #neck-shirt:hover #paw-r .cls-2:nth-child(2) {
+  svg:hover #paw-r .cls-2:nth-child(2) {
     transform: rotate(-20deg);
     transform-origin: center left;
     transform-box: fill-box; }
-  #neck-shirt:hover #paw-r .cls-2:nth-child(4) {
+  svg:hover #paw-r .cls-2:nth-child(4) {
     transform: rotate(5deg);
     transform-origin: center left;
     transform-box: fill-box; }
-  #neck-shirt:hover #paw-r .cls-2:nth-child(5) {
+  svg:hover #paw-r .cls-2:nth-child(5) {
     transform: translateY(2.7em) rotate(-22deg);
     transform-origin: center left;
     transform-box: fill-box; }
-  #neck-shirt:hover #paw-r .cls-2:nth-child(6) {
+  svg:hover #paw-r .cls-2:nth-child(6) {
     transform: rotate(20deg);
     transform-origin: center left;
     transform-box: fill-box; }
-#neck-shirt:hover #paw-l .cls-2 {
+svg:hover #paw-l .cls-2 {
   transition: transform 1s ease; }
-  #neck-shirt:hover #paw-l .cls-2:nth-child(1) {
+  svg:hover #paw-l .cls-2:nth-child(1) {
     transform: translateY(-3em) rotate(-10deg);
     transform-origin: center right;
     transform-box: fill-box; }
-  #neck-shirt:hover #paw-l .cls-2:nth-child(2) {
+  svg:hover #paw-l .cls-2:nth-child(2) {
     transform: rotate(20deg);
     transform-origin: center right;
     transform-box: fill-box; }
-  #neck-shirt:hover #paw-l .cls-2:nth-child(4) {
+  svg:hover #paw-l .cls-2:nth-child(4) {
     transform: rotate(40deg);
     transform-origin: center right;
     transform-box: fill-box;
     animation: paw-l-moves 2s ease infinite; }
-  #neck-shirt:hover #paw-l .cls-2:nth-child(5) {
+  svg:hover #paw-l .cls-2:nth-child(5) {
     transform: translateY(2.7em) rotate(22deg);
     transform-origin: center right;
     transform-box: fill-box; }
-  #neck-shirt:hover #paw-l .cls-2:nth-child(6) {
+  svg:hover #paw-l .cls-2:nth-child(6) {
     transform: rotate(-20deg);
     transform-origin: center right;
     transform-box: fill-box; }

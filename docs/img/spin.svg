@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45" height="56" viewBox="0 0 45 56">
+  <g fill-rule="evenodd" transform="translate(-4 .075)">
+    <circle cx="25.5" cy="28.425" r="12.5"/>
+    <circle cx="13" cy="21.925" r="9"/>
+    <polygon points="22 18.603 19.653 8.806 26.664 0 23.158 9.302 25 19.888"/>
+    <polygon points="9.347 44.528 7 34.73 14.011 25.925 10.505 35.227 12.347 45.812" transform="scale(1 -1) rotate(-48 -70.057 0)"/>
+    <polygon points="34.347 24.528 32 14.73 39.011 5.925 35.505 15.227 37.347 25.812" transform="rotate(54 35.505 15.869)"/>
+    <polygon points="21.347 53.528 19 43.73 26.011 34.925 22.505 44.227 24.347 54.812" transform="scale(1 -1) rotate(-23 -198.031 0)"/>
+    <polygon points="38.92 27.306 37.246 18.931 42.246 11.404 39.746 19.355 41.06 28.404" transform="rotate(74 39.746 19.904)"/>
+    <polygon points="28.674 50.827 27 42.452 32 34.925 29.5 42.876 30.813 51.925" transform="scale(1 -1) rotate(10 525.849 0)"/>
+    <polygon points="28.347 22.528 26 12.73 33.011 3.925 29.505 13.227 31.347 23.812" transform="rotate(21 29.505 13.869)"/>
+    <polygon points="14.347 51.528 12 41.73 19.011 32.925 15.505 42.227 17.347 52.812" transform="scale(1 -1) rotate(-29 -150.255 0)"/>
+  </g>
+</svg>
