@@ -33,6 +33,11 @@ Daan was very excited with my work but like any other feedback there is always r
 Nevertheless I'm still proud in what I've achieved and explored the few days with this course.
 Also Dark and Light is hella awesome in my opnion!
 
+### Feedback // Vasilis
+
+Vasilis toldme to try and experiment with the lyrics I had in the background. He showed me the CSS trick [Almanac](https://css-tricks.com/almanac/)
+I've never seen this website before so I got excited. Definetly want to start digging through.
+
 
 
 <!-- 
