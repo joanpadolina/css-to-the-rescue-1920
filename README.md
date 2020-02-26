@@ -21,6 +21,64 @@ For this course of breaking te internet I wanted to make an artist page of Billi
 1. Make it as crazy as possible.
 1. Let the user explore.
 
+## What is new for me after CSS-to-the-rescue?
+
+`reflection`
+
+Personally I've almost never worked this detailed with CSS. I knew you could do crazy stuff with only css but I never thought to be able to experiment this during school. 
+
+* **nth-of-type // first-of-type**
+
+First thing I've tried is to use less classes and fully focused on specification withing the html elements. This, for me, was the most challenging this to do because I only knew the class and id selecting method. I do understand the benefits using this methods.
+
+The first reason why I like this method is the easiness of selection the elements. You don't have to rememeber te classes you make and it's more efficient. 
+
+It is more reliable and I didn't know you can go as far as selection direct child or parents of elements. The syntax `~ >` does the job better than expected.
+
+### ~
+This selects every element that are preceded of an element.
+
+### >
+Selecting the child of the direct parent.
+
+### +
+Select the element that are placed immediately after an element.
+
+
+ The only down-side for a beginner is to know wat your the `parent` and what you're trying to select. This can be tricky if you are trying to select something that is not inside the parent. This gives a lot of frustration if it's not working.
+
+
+
+* **keyframes**
+
+Animations are the best in CSS. They are so fun to make and in this course you can go as far as you can. I felt a little hold back by myself because I couldn't see past the basic styling of css. The animation with keyframes where great to be able experiment because I cannot see me trying to experiment in the free time I have. There's a lot you can do in the era so this was very fun.
+
+I felt like I didn't experiment enough, I stayed with the percentage from 0 to 100 and that's about it. Inside the animation I've tried a lot with the transform especially the rotation.
+
+* **SVG**
+
+This part was a lot of fun and experimening. The only way I used svgs from illustrator are for icons. I've changed the color with wil on hover and that's about it.
+
+After making a fast vector of my concept I've noticed that, there are a lot of groups. There is a lot of everything. This was the most 'headache' activating project. You are constantly looking for the right group or selection in the svg. 
+But once you get the hang of it, it gets a lot easier when using the child selector.
+
+To be able to select individual svg element gave you more options and opened doors in animation.
+
+
+* **writing-mode // text-orientation**
+
+In my project I used some lyrics from Billie for the background and some for the foreground. I did a basic skew and rotation of some interaction but this was not full filling. So I dig a little to animating the lyrics and came across the writing-mode.
+
+After using this the background got more interesting and felt like breaking the internet. I can see how fun this can be if your using some animation. 
+
+
+* **::before // ::after**
+
+This is so powerfull if you can change the content of the element. I've noticed you can place things before and after an element. This can me a logo or instead of placing an icon in html you can also place it with the before/after.
+
+
+
+
 ### Feedback // Vitaly
 
 For the first feedback from Vitaly we came to a conclusion that the way my creation is set there is so much room for craziness. My interaction was a lot less and needed some more love. I've done this by adding some hover on **invisible** corners where to lyrics would go bend to that corner. My initial thought was "I need Javascript to achieve this" but Vasillis was like "naah-aahh you don't" so the outcome was pretty fun without javscript.

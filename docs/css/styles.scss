@@ -1,4 +1,3 @@
-@import url(mediaqueries.scss);
 // ** basic styling ** //
 
 :root {
@@ -125,10 +124,8 @@ div.lyrics_back span {
     top: -12em;
     z-index: 0;
     transition: 2000ms ease-in-out;
-    // cursor: url('../img/spin.svg'), auto;
     width: 31em;
     left: -5em;
-    // animation:lyrics-back-updown 30s infinite ease-in-out;
 }
 
 // *********************************//*********************************//
