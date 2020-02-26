@@ -1,3 +1,4 @@
+@import url(mediaqueries.scss);
 // ** basic styling ** //
 
 :root {
@@ -118,12 +119,13 @@ span {
     font-size: 3rem;
 }
 
+
 div.lyrics_back span {
     position: absolute;
     top: -12em;
     z-index: 0;
     transition: 2000ms ease-in-out;
-    cursor: url('../img/spin.svg'), auto;
+    // cursor: url('../img/spin.svg'), auto;
     width: 31em;
     left: -5em;
     // animation:lyrics-back-updown 30s infinite ease-in-out;
@@ -151,7 +153,7 @@ main button {
 }
 
 main section button:hover {
-    cursor: pointer;
+    cursor: url(../img/spin.svg), auto;
 }
 
 main section button:first-of-type {
@@ -182,22 +184,22 @@ main section button:nth-of-type(4) {
     left: -5.6em;
 }
 
-main section button:first-of-type:hover~.lyrics_back span {
+main section button:first-of-type:focus~.lyrics_back span {
     color: red;
     transform: skew(15deg, 15deg);
 }
 
-main section button:nth-child(2):hover~.lyrics_back span {
+main section button:nth-child(2):focus~.lyrics_back span {
     color: red;
     transform: skew(-0.06turn, -8deg);
 }
 
-main section button:nth-child(3):hover~.lyrics_back span {
+main section button:nth-child(3):focus~.lyrics_back span {
     color: red;
     transform: skew(.312rad);
 }
 
-main section button:nth-child(4):hover~.lyrics_back span {
+main section button:nth-child(4):focus~.lyrics_back span {
     color: red;
     transform: skew(-25deg, 5deg);
 }
@@ -503,7 +505,66 @@ svg {
     z-index: 2;
 }
 
+// svg:active ~ section div.lyrics_back span{
+//     writing-mode: vertical-lr;
+//     text-orientation: upright;
+//     transform: rotate(-20deg)
+// }
+// section div.lyrics_back span:active{
+//     writing-mode: vertical-rl;
+//     text-orientation: upright;
+//     transform: rotate(20deg)
+// }
+
+svg:hover ~ section div.lyrics_back span{
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    transform: rotate(20deg);
+    animation: textgowow 200ms infinite;
+}
+@keyframes textgowow{
+    0%{
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        transform: rotate(20deg);
+    }
+    50%{
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        font-size: 6.2em;
+        transform: rotate(-30deg)
+    }
+
+    100%{
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        transform: rotate(20deg);
+    }
+}
+
+
+// span:active{
+//     writing-mode: vertical-lr;
+//     text-orientation: upright;
+    
+// }
+
+// span {
+//     writing-mode: vertical-lr;
+//     text-orientation: upright;
+// }
+
+// div.lyrics_back span {
+//     position: absolute;
+//     top: -12em;
+//     z-index: 0;
+//     transition: 2000ms ease-in-out;
+//     width: 41em;
+//     height: 67em;
+//     left: -4em;
+// }
 svg:hover {
+    cursor: url(../img/spin.svg), auto;
     clip-path: polygon(48% 30%, 71% 21%, 100% 43%, 95% 73%, 84% 87%, 52% 68%, 9% 83%, 0 62%, 1% 34%, 28% 23%);
 
 }
@@ -786,6 +847,7 @@ svg #head #tear-r,
 #tear-l {
     animation: tear-animate 40s ease-in-out infinite;
 }
+
 
 
 // *********************************//*********************************//
