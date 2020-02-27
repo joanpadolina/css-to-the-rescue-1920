@@ -21,6 +21,8 @@ For this course of breaking te internet I wanted to make an artist page of Billi
 1. Make it as crazy as possible.
 1. Let the user explore.
 
+****
+
 ## What is new for me after CSS-to-the-rescue?
 
 `reflection`
