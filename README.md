@@ -79,7 +79,7 @@ After using this the background got more interesting and felt like breaking the 
 This is so powerfull if you can change the content of the element. I've noticed you can place things before and after an element. This can me a logo or instead of placing an icon in html you can also place it with the before/after.
 
 
-
+****
 
 ### Feedback // Vitaly
 
