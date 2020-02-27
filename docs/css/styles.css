@@ -58,6 +58,13 @@ h1 {
   text-align: center;
   font-size: 5rem; }
 
+p {
+  position: absolute;
+  text-align: center;
+  width: 100vw;
+  display: block;
+  z-index: 1; }
+
 h2 {
   font-size: 2em;
   margin-top: 1.5em; }
@@ -79,13 +86,6 @@ header {
   width: 100%;
   top: 50%; }
 
-@keyframes lyrics-go-up {
-  0% {
-    top: 13; }
-  50% {
-    top: 8em; }
-  100% {
-    top: 11; } }
 span {
   opacity: .2;
   font-size: 3rem; }
@@ -177,27 +177,6 @@ main section div:nth-of-type(3) span {
   z-index: 3;
   animation: lyrics-right 1s infinite ease-in-out; }
 
-@keyframes lyrics-back-updown {
-  0% {
-    top: -16em; }
-  50% {
-    top: -20em; }
-  100% {
-    top: -16em; } }
-@keyframes lyrics-right {
-  0% {
-    right: 0em; }
-  50% {
-    right: 25em; }
-  100% {
-    right: 0em; } }
-@keyframes lyrics-left {
-  0% {
-    transform: translate(-8em, 1em) rotate(90deg); }
-  50% {
-    transform: translate(-8em, -3em) rotate(90deg); }
-  100% {
-    transform: translate(-8em, 1em) rotate(90deg); } }
 main input[type="radio"] {
   opacity: 0;
   position: fixed;
@@ -351,27 +330,10 @@ svg:hover ~ section div:first-of-type span {
 svg:active ~ section div:first-of-type span {
   animation: textgowow 200ms infinite; }
 
-@keyframes textgowow {
-  0% {
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    transform: rotate(20deg); }
-  50% {
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    font-size: 6.2em;
-    transform: rotate(-30deg); }
-  100% {
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    transform: rotate(20deg); } }
 svg:hover {
   cursor: url(../img/spin1.svg), auto;
   clip-path: polygon(48% 30%, 71% 21%, 100% 43%, 95% 73%, 84% 87%, 52% 68%, 9% 83%, 0 62%, 1% 34%, 28% 23%); }
 
-@keyframes clip-path {
-  0% {
-    clip-path: polygon(47% 1%, 56% 19%, 71% 31%, 80% 52%, 72% 72%, 50% 79%, 29% 75%, 20% 56%, 15% 40%, 33% 22%); } }
 svg #head {
   animation: head-infinite-rotate 30s infinite; }
 svg #paw-r #paw-r-1gr {
@@ -507,6 +469,41 @@ svg #head #tear-r,
 #tear-l {
   animation: tear-animate 40s ease-in-out infinite; }
 
+@keyframes textgowow {
+  0% {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    transform: rotate(20deg); }
+  50% {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 6.2em;
+    transform: rotate(-30deg); }
+  100% {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    transform: rotate(20deg); } }
+@keyframes lyrics-back-updown {
+  0% {
+    top: -16em; }
+  50% {
+    top: -20em; }
+  100% {
+    top: -16em; } }
+@keyframes lyrics-right {
+  0% {
+    right: 0em; }
+  50% {
+    right: 25em; }
+  100% {
+    right: 0em; } }
+@keyframes lyrics-left {
+  0% {
+    transform: translate(-8em, 1em) rotate(90deg); }
+  50% {
+    transform: translate(-8em, -3em) rotate(90deg); }
+  100% {
+    transform: translate(-8em, 1em) rotate(90deg); } }
 @keyframes eyesLeft {
   0% {
     clip-path: polygon(40% 4%, 73% 15%, 91% 38%, 100% 64%, 76% 77%, 48% 84%, 16% 75%, 4% 55%, 0% 35%, 14% 10%); }
