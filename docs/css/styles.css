@@ -82,14 +82,18 @@ header {
 @keyframes lyrics-go-up {
   0% {
     top: 13; }
+  50% {
+    top: 8em; }
   100% {
-    top: -12em; } }
+    top: 11; } }
 span {
   opacity: .2;
   font-size: 3rem; }
 
 div.lyrics_back span {
   position: absolute;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
   top: -12em;
   z-index: 0;
   transition: 2000ms ease-in-out;
@@ -161,7 +165,7 @@ main section div:nth-of-type(2) span {
   z-index: 1;
   display: block;
   transform: translate(-8em, 1em) rotate(90deg);
-  animation: lyrics-left 50s infinite ease-in-out; }
+  animation: lyrics-left 1s infinite ease-in-out; }
 
 main section div:nth-of-type(3) span {
   white-space: nowrap;
@@ -171,13 +175,13 @@ main section div:nth-of-type(3) span {
   top: -15.5em;
   background: black;
   z-index: 3;
-  animation: lyrics-right 120s infinite ease-in-out; }
+  animation: lyrics-right 1s infinite ease-in-out; }
 
 @keyframes lyrics-back-updown {
   0% {
     top: -16em; }
   50% {
-    top: -34em; }
+    top: -20em; }
   100% {
     top: -16em; } }
 @keyframes lyrics-right {
@@ -191,7 +195,7 @@ main section div:nth-of-type(3) span {
   0% {
     transform: translate(-8em, 1em) rotate(90deg); }
   50% {
-    transform: translate(-8em, -10em) rotate(90deg); }
+    transform: translate(-8em, -3em) rotate(90deg); }
   100% {
     transform: translate(-8em, 1em) rotate(90deg); } }
 main input[type="radio"] {
