@@ -61,6 +61,7 @@ body {
     line-height: 1.5;
     margin: 0;
 }
+
 main {
     width: 70%;
     text-align: center;
@@ -75,13 +76,14 @@ h1 {
     font-size: 5rem;
 }
 
-p{
+p {
     position: absolute;
     text-align: center;
-    width:100vw;
+    width: 100vw;
     display: block;
     z-index: 1;
 }
+
 h2 {
     font-size: 2em;
     margin-top: 1.5em;
@@ -115,7 +117,7 @@ span {
 
 
 div.lyrics_back span {
-    position: absolute;   
+    position: absolute;
     writing-mode: vertical-rl;
     text-orientation: upright;
     top: -12em;
@@ -209,7 +211,7 @@ main section div:nth-of-type(2) span {
     z-index: 1;
     display: block;
     transform: translate(-8em, 1em)rotate(90deg);
-    animation:lyrics-left 1s infinite ease-in-out;
+    animation: lyrics-left 1s infinite ease-in-out;
 }
 
 main section div:nth-of-type(3) span {
@@ -220,7 +222,7 @@ main section div:nth-of-type(3) span {
     top: -15.5em;
     background: black;
     z-index: 3;
-    animation:lyrics-right 1s infinite ease-in-out;
+    animation: lyrics-right 1s infinite ease-in-out;
 }
 
 
@@ -258,7 +260,7 @@ main label:first-of-type {
     width: 6em;
     height: 4em;
     clip-path: polygon(40% 4%, 73% 15%, 91% 38%, 100% 64%, 76% 77%, 48% 84%, 16% 75%, 4% 55%, 0% 35%, 14% 10%);
-    animation:eyesLeft 1000ms alternate infinite;
+    animation: eyesLeft 1000ms alternate infinite;
 }
 
 main label:nth-of-type(2) {
@@ -266,9 +268,10 @@ main label:nth-of-type(2) {
     width: 6em;
     height: 6em;
     clip-path: polygon(53% 5%, 81% 11%, 98% 27%, 99% 51%, 89% 64%, 59% 70%, 27% 66%, 0 50%, 10% 32%, 24% 15%);
-    animation:eyesRight 1000ms alternate infinite;
+    animation: eyesRight 1000ms alternate infinite;
 }
-main label:hover{
+
+main label:hover {
     cursor: url(../img/spin1.svg), auto;
 }
 
@@ -317,6 +320,7 @@ input[type="radio"]:checked~section div:nth-of-type(1) span {
     color: black;
     opacity: 1;
 }
+
 input[type="radio"]:checked body {
     background: white;
 }
@@ -416,8 +420,8 @@ My god is gonna owe me There's nothing left to save now";
 }
 
 input[type="radio"]:nth-of-type(2):checked~section div:nth-of-type(1) span {
-    background:var(--dark);
-    color:rgba(255, 255, 255, 0.363);
+    background: var(--dark);
+    color: rgba(255, 255, 255, 0.363);
     opacity: 1;
 }
 
@@ -464,7 +468,7 @@ footer {
 
 
 svg {
-    max-width: 100%;
+    width: 100%;
     margin: auto;
     border: 1em solid black;
     background: black;
@@ -473,6 +477,7 @@ svg {
     transition: 750ms ease-in-out;
     z-index: 2;
 }
+
 svg:hover~section div:first-of-type span {
     writing-mode: vertical-rl;
     text-orientation: upright;
@@ -823,7 +828,7 @@ svg #head #tear-r,
 
 @keyframes lyrics-left {
     0% {
-        transform: translate(-8em, 1em)rotate(90deg);
+        transform: translate(-8em, -1em)rotate(90deg);
     }
 
     50% {
@@ -831,7 +836,7 @@ svg #head #tear-r,
     }
 
     100% {
-        transform: translate(-8em, 1em)rotate(90deg);
+        transform: translate(-8em, -1em)rotate(90deg);
     }
 }
 
@@ -840,13 +845,16 @@ svg #head #tear-r,
     0% {
         clip-path: polygon(40% 4%, 73% 15%, 91% 38%, 100% 64%, 76% 77%, 48% 84%, 16% 75%, 4% 55%, 0% 35%, 14% 10%);
     }
-    20%{
+
+    20% {
         clip-path: polygon(33% 55%, 56% 56%, 72% 56%, 100% 61%, 71% 57%, 44% 57%, 21% 55%, 10% 54%, 0 50%, 11% 53%);
     }
+
     70% {
         ip-path: polygon(40% 4%, 73% 15%, 91% 38%, 100% 64%, 76% 77%, 48% 84%, 16% 75%, 4% 55%, 0% 35%, 14% 10%);
     }
-    100%{
+
+    100% {
         clip-path: polygon(40% 4%, 73% 15%, 91% 38%, 100% 64%, 76% 77%, 48% 84%, 16% 75%, 4% 55%, 0% 35%, 14% 10%);
     }
 }
@@ -855,13 +863,16 @@ svg #head #tear-r,
     0% {
         clip-path: polygon(53% 5%, 81% 11%, 98% 27%, 99% 51%, 89% 64%, 59% 70%, 27% 66%, 0 50%, 10% 32%, 24% 15%);
     }
-    20%{
+
+    20% {
         clip-path: polygon(53% 45%, 78% 45%, 97% 43%, 100% 43%, 84% 49%, 60% 49%, 26% 48%, 0 50%, 9% 48%, 24% 46%);
     }
+
     70% {
         clip-path: polygon(53% 5%, 81% 11%, 98% 27%, 99% 51%, 89% 64%, 59% 70%, 27% 66%, 0 50%, 10% 32%, 24% 15%);
     }
-    100%{
+
+    100% {
         clip-path: polygon(53% 5%, 81% 11%, 98% 27%, 99% 51%, 89% 64%, 59% 70%, 27% 66%, 0 50%, 10% 32%, 24% 15%);
     }
 }
@@ -1038,5 +1049,22 @@ svg #head #tear-r,
     100% {
         transform: translate(2px, -8px);
         transform-origin: center top;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    svg {
+        width: 60em;
+        top: -18em;
+        left: -20em;
+    }
+    label:first-of-type{
+        top: 18em;
+        left: 1em;
+    }
+    label:nth-of-type(2){
+        top: 18em;
+        left: 1em;
     }
 }

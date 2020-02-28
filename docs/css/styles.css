@@ -313,7 +313,7 @@ footer {
   font-style: italic; }
 
 svg {
-  max-width: 100%;
+  width: 100%;
   margin: auto;
   border: 1em solid black;
   background: black;
@@ -499,11 +499,11 @@ svg #head #tear-r,
     right: 0em; } }
 @keyframes lyrics-left {
   0% {
-    transform: translate(-8em, 1em) rotate(90deg); }
+    transform: translate(-8em, -1em) rotate(90deg); }
   50% {
     transform: translate(-8em, -3em) rotate(90deg); }
   100% {
-    transform: translate(-8em, 1em) rotate(90deg); } }
+    transform: translate(-8em, -1em) rotate(90deg); } }
 @keyframes eyesLeft {
   0% {
     clip-path: polygon(40% 4%, 73% 15%, 91% 38%, 100% 64%, 76% 77%, 48% 84%, 16% 75%, 4% 55%, 0% 35%, 14% 10%); }
@@ -626,5 +626,18 @@ svg #head #tear-r,
   100% {
     transform: translate(2px, -8px);
     transform-origin: center top; } }
+@media only screen and (max-width: 600px) {
+  svg {
+    width: 60em;
+    top: -18em;
+    left: -20em; }
+
+  label:first-of-type {
+    top: 18em;
+    left: 1em; }
+
+  label:nth-of-type(2) {
+    top: 18em;
+    left: 1em; } }
 
 /*# sourceMappingURL=styles.css.map */
